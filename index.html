@@ -18,9 +18,10 @@
     <section id="user-goal">
       <h2>Animals</h2>
       <p>{{ callToAction }}</p>
-      <img v-bind:src="animalImage" >
-      <p>There are {{ totalAnimals }} animals in total.  You got animal number #{{ animalNumber }}.  Enjoy!!!</p>
+      <img v-bind:src="animalImage()" >
+      <p>There are {{ animalArray.length }} animals in total.  You got animal number #{{ animalIndex() + 1 }}.  Enjoy!!!</p>
     </section>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="randomizer.js"></script>
   </body>
 </html>
